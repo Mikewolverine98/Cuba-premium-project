@@ -22,261 +22,13 @@ body{
   
   
   .officialartist{
-    font-size: 15px;
+    font-size: clamp(10px, 5vw, 15px);
   
     
   }
   
   
-  
-  /* Google Fonts Import Link */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  .sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 260px;
-    background: rgb(19, 18, 18);
-    z-index: 100;
-    transition: all 0.5s ease;
-  }
-  .sidebar.close{
-    width: 78px;
-  }
-  .sidebar .logo-details{
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .sidebar .logo-details i{
-    font-size: 30px;
-    color: #fff;
-    height: 50px;
-    min-width: 78px;
-    text-align: center;
-    line-height: 50px;
-  }
-  .sidebar .logo-details .logo_name{
-    font-size: 22px;
-    color: #fff;
-    font-weight: 600;
-    transition: 0.3s ease;
-    transition-delay: 0.1s;
-  }
-  .sidebar.close .logo-details .logo_name{
-    transition-delay: 0s;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .sidebar .nav-links{
-    height: 100%;
-    padding: 30px 0 150px 0;
-    overflow: auto;
-  }
-  .sidebar.close .nav-links{
-    overflow: visible;
-  }
-  .sidebar .nav-links::-webkit-scrollbar{
-    display: none;
-  }
-  .sidebar .nav-links li{
-    position: relative;
-    list-style: none;
-    transition: all 0.4s ease;
-  }
-  .sidebar .nav-links li:hover{
-    background: #1d1b31;
-  }
-  .sidebar .nav-links li .iocn-link{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .sidebar.close .nav-links li .iocn-link{
-    display: block
-  }
-  .sidebar .nav-links li i{
-    height: 50px;
-    min-width: 78px;
-    text-align: center;
-    line-height: 50px;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .sidebar .nav-links li.showMenu i.arrow{
-    transform: rotate(-180deg);
-  }
-  .sidebar.close .nav-links i.arrow{
-    display: none;
-  }
-  .sidebar .nav-links li a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  .sidebar .nav-links li a .link_name{
-    font-size: 17px;
-    font-weight: 400;
-    color: gray;
-    transition: all 0.4s ease;
-    margin-left: -1.2rem;
-  }
-  .sidebar.close .nav-links li a .link_name{
-    opacity: 0;
-    pointer-events: none;
-  }
-  .sidebar .nav-links li .sub-menu{
-    padding: 6px 6px 14px 80px;
-    margin-top: -10px;
-    background: #1d1b31;
-    display: none;
-  }
-  .sidebar .nav-links li.showMenu .sub-menu{
-    display: block;
-  }
-  .sidebar .nav-links li .sub-menu a{
-    color: #fff;
-    font-size: 15px;
-    padding: 5px 0;
-    white-space: nowrap;
-    opacity: 0.6;
-    transition: all 0.3s ease;
-  }
-  .sidebar .nav-links li .sub-menu a:hover{
-    opacity: 1;
-  }
-  .sidebar.close .nav-links li .sub-menu{
-    position: absolute;
-    left: 100%;
-    top: -10px;
-    margin-top: 0;
-    padding: 10px 20px;
-    border-radius: 0 6px 6px 0;
-    opacity: 0;
-    display: block;
-    pointer-events: none;
-    transition: 0s;
-  }
-  .sidebar.close .nav-links li:hover .sub-menu{
-    top: 0;
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.4s ease;
-  }
-  .sidebar .nav-links li .sub-menu .link_name{
-    display: none;
-  }
-  .sidebar.close .nav-links li .sub-menu .link_name{
-    font-size: 18px;
-    opacity: 1;
-    display: block;
-  }
-  .sidebar .nav-links li .sub-menu.blank{
-    opacity: 1;
-    pointer-events: auto;
-    padding: 3px 20px 6px 16px;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .sidebar .nav-links li:hover .sub-menu.blank{
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .sidebar .profile-details{
-    position: fixed;
-    bottom: 0;
-    width: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #1d1b31;
-    padding: 12px 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar.close .profile-details{
-    background: none;
-  }
-  .sidebar.close .profile-details{
-    width: 78px;
-  }
-  .sidebar .profile-details .profile-content{
-    display: flex;
-    align-items: center;
-  }
-  .sidebar .profile-details img{
-    height: 52px;
-    width: 52px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 0 14px 0 12px;
-    background: #1d1b31;
-    transition: all 0.5s ease;
-  }
-  .sidebar.close .profile-details img{
-    padding: 10px;
-  }
-  .sidebar .profile-details .profile_name,
-  .sidebar .profile-details .job{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .sidebar.close .profile-details i,
-  .sidebar.close .profile-details .profile_name,
-  .sidebar.close .profile-details .job{
-    display: none;
-  }
-  .sidebar .profile-details .job{
-    font-size: 12px;
-  }
-  .home-section{
-    position: relative;
-    background: ;
-    height: 100vh;
-    left: 260px;
-    width: calc(100% - 260px);
-    transition: all 0.5s ease;
-  }
-  .sidebar.close ~ .home-section{
-    left: 78px;
-    width: calc(100% - 78px);
-  }
-  .home-section .home-content{
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  .home-section .home-content .bx-menu,
-  .home-section .home-content .text{
-    color: #11101d;
-    font-size: 35px;
-  }
-  .home-section .home-content .bx-menu{
-    margin: 0 15px;
-    cursor: pointer;
-  }
-  .home-section .home-content .text{
-    font-size: 26px;
-    font-weight: 600;
-  }
-  @media (max-width: 420px) {
-    .sidebar.close .nav-links li .sub-menu{
-      display: none;
-    }
-  }
-  
-  
+
   .body{
   background-color: rgb(39, 38, 38);
       max-width: 100%;
@@ -297,7 +49,7 @@ body{
   
   
   .officialartist{
-    font-size: 15px;
+    font-size: clamp(10px, 5vw, 15px);
   
     
   }
@@ -594,7 +346,7 @@ margin-left: 1.80rem;
 
   .Analyticstext{
       color: white;
-      font-size: 25px;
+      font-size: clamp(10px, 5vw, 15px);
       margin-left: 1rem;
   }
 
@@ -611,13 +363,14 @@ margin-left: 1.80rem;
 
 .default{
   color: white;
+  font-size: clamp(15px, 5vw, 25px);
 }
 
 
 .my-coldefault{
   margin-left:2rem;
   margin-top: 3rem;
-  font-size: 25px;
+  
 }
 
 
@@ -643,7 +396,7 @@ margin-left: 6rem;
 
 
 .my-thirdcoldefaultbuttons{
-margin-left: 6rem;
+margin-left: 6%;
 }
 
 
@@ -731,7 +484,7 @@ margin-right: 4rem;
   border-top-right-radius: 10px;
  border-bottom-left-radius: 10px;
  border-bottom-right-radius: 10px;
- margin-left: 6rem;
+ margin-left: 6%;
 }
 
 
@@ -791,6 +544,7 @@ margin-right: 4rem;
 
 .monthsale{
   color: gray;
+
 }
 
 
@@ -804,6 +558,13 @@ margin-right: 4rem;
   font-size: 18px;
 }
 
+.daily{
+ font-size: clamp(6px, 5vw, 20px);
+
+}
+
+
+
 
 .my-colweekly{
   color: red;
@@ -813,19 +574,41 @@ margin-right: 4rem;
 }
 
 
+.weekly{
+  font-size: clamp(6px, 5vw, 20px);
+
+}
+
+
+
 .my-colonline{
 color: gray;
 margin-top: 4rem;
   margin-left: 5rem;
-  font-size: 15px;
+  
 }
+
+.online{
+
+  font-size: clamp(6px, 5vw, 15px);
+
+}
+
 
 .my-colstore{
   color: gray;
   margin-top: 4rem;
 
-  font-size: 15px;
 }
+
+.store{
+
+  font-size: clamp(6px, 5vw, 15px);
+
+}
+
+
+
 
 
 .my-viewersrow{
@@ -859,13 +642,11 @@ margin-top: 3rem;
 
 
 
-
-
 .my-coljohndoe{
   border: 1px solid rgb(19, 18, 18);
   background-color: rgb(19, 18, 18);
   padding-bottom: 10px;
-  margin-left: 9rem;
+
   margin-top: 1rem;
 border-top-left-radius: 5%;
 border-top-right-radius: 5%;
@@ -890,6 +671,20 @@ border-top-right-radius: 6%;
   margin-top: -4rem;
 }
 
+
+
+.Johan{
+  font-size: clamp(6px, 5vw, 20px);
+  color: white;
+}
+
+.Johandesign{
+  font-size: clamp(6px, 5vw, 15px);
+  color: gray;
+}
+
+
+
 .my-iconsjohndoe{
   margin-left: 2rem;
   justify-content: space-around;
@@ -903,32 +698,29 @@ margin-top: 1rem;
   margin-top: 1rem;
 }
 
-.design{
-  color: gray;
-  font-size: 1.2rem;
-}
 
-.my-totalrows{
-  font-size: 1.2rem;
-}
+
+
 
 
 
 .my-totalviews{
   border-right: 1px solid white;
-  font-size: 1.2rem;
+ 
   color: gray;
 }
 
+
+
 .my-totalsubs{
   border-right: 1px solid white;
-  font-size: 1.2rem;
+
   color: gray;
 }
 
 .my-totallinkclicks{
 
-  font-size: 1.2rem;
+
   color: gray;
 
 }
@@ -939,19 +731,44 @@ margin-top: 1rem;
 }
 
 
-.totalviews{
-font-size: 1rem;
+.totalviewss{
+  font-size: clamp(6px, 5vw, 15px);
 }
 
 
-.totalsubscribers{
-  font-size: 1rem;
+.totalsubscriberss{
+  font-size: clamp(6px, 5vw, 15px);
 }
 
 
-.totallinkclicks{
-  font-size: 1rem;
+.totallinkclickss{
+  font-size: clamp(6px, 5vw, 15px);
 }
+
+
+
+
+
+
+
+.topreleases{
+  font-size: clamp(6px, 5vw, 15px);
+}
+
+.weekly{
+  font-size: clamp(6px, 5vw, 15px);
+  color: red;
+}
+
+
+.monthly{
+  font-size: clamp(6px, 5vw, 15px);
+}
+
+.yearly{
+  font-size: clamp(6px, 5vw, 15px);
+}
+
 
 
 
@@ -975,9 +792,7 @@ font-size: 1rem;
   margin-left: 1rem;
 }
 
-.topreleases{
-  font-size: 20px;
-}
+
 
 
 .my-colsongs{
@@ -1718,6 +1533,7 @@ font-size: 17px;
 
 .all{
   color: red;
+  font-size: clamp(6px, 5vw, 15px);
 }
 
 .my-allunactiveactive{
@@ -1725,23 +1541,21 @@ font-size: 17px;
 margin-left: 1rem;
 }
 
-.btn-2{
-  margin-top: -0.3rem;
-  margin-left: 28rem;
-  width: 15rem;
-  height: 2.2rem;
-  border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
+.active{
+  font-size: clamp(6px, 5vw, 15px);
+}
+
+.unactive{
+  font-size: clamp(6px, 5vw, 15px);
 }
 
 
 
 
-
-
-
+.viewspages{
+  font-size: clamp(6px, 5vw, 20px);
+  color: white;
+}
 
 
 .my-roww{
@@ -2548,12 +2362,583 @@ margin-top: -0.35rem;
 
 
 .userprofilewallpaper{
-max-width: 390%;
+max-width: 395%;
+margin-left: -4.2%;
 
 }
+
+
+.marcjenko{
+  border: 8px solid white;
+  max-width: 10%;
+  border-radius: 100%;
+  margin-top: -8%;
+  margin-left: 8%;
+ z-index: 5;
+}
+
+
+.markjenkotext{
+  color: white;
+  margin-left: 8%;
+  text-align: center;
+}
+
 
 
 .my-coluser{
   margin-top: -33rem;
   margin-left: 6.5rem;
+}
+
+
+.designer{
+  color: gray;
+}
+
+
+.my-colmarkjenkoemail{
+  color: white;
+  margin-left: 10%;
+  font-size: 0.8rem;
+}
+
+.my-colmarkjenkoemailborder{
+
+border-bottom: 1px solid white;
+margin-left: 7%;
+
+}
+
+
+.my-rowphones{
+  margin-top: 6%;
+  margin-left: 4%;
+}
+
+
+.my-colfollowers{
+  color: white;
+border-right: 1px solid white;
+  margin-top: 2%;
+
+  text-align: center;
+}
+
+
+.my-colfollowing{
+  margin-top: 2%;
+  text-align: center;
+  color: white;
+}
+
+
+.followers{
+  margin-top: 15%;
+}
+
+
+
+.my-colmarkjenkobigborder{
+  margin-left: 7%;
+  margin-top: -6.7%;
+  border: 1px solid rgb(19, 18, 18);
+  background-color: rgb(19, 18, 18);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.my-colbeneathmarkjenko{
+  margin-left: 7%;
+margin-top: 3%;
+  border: 1px solid rgb(19, 18, 18);
+  background-color: rgb(19, 18, 18);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+padding-bottom: 1%;
+}
+
+
+
+
+
+.beneathmarkjenkojohandoe{
+  border-radius: 100%;
+  border: 4px solid white;
+ margin-left: 50%;
+ margin-top: 30%;
+  max-width: 80%;
+
+}
+
+.beneathmarkjenkojohandoetext{
+  color: white;
+  margin-top: 25%;
+margin-left: 5%;
+}
+
+.my-colbeneathmarkjenkojohandoesectext{
+  color: white;
+  margin-top: 4%;
+margin-left: 55%;
+}
+
+
+
+.my-colbeneathmarkjenkojohandoetextborder{
+  border-bottom: 1px solid white;
+  margin-top: 2%;
+}
+
+
+.beneathmarkjenkojohandoetextlorem{
+  color: white;
+  margin-top: 3%;
+  margin-left: -1%;
+}
+
+
+
+
+
+.lorembeneathmarkjenkojohandoeimage{
+  max-width: 94%;
+}
+
+
+
+
+
+
+
+
+.my-rowlorembeneathmarkjenkojohandoeimagelike{
+  margin-top: 2%;
+}
+
+
+
+.my-collorembeneathmarkjenkojohandoeimagelike{
+  margin-left: 3%;
+  color: white;
+
+}
+
+
+.liketext{
+  margin-top:3%;
+}
+
+.like{
+  margin-left: 5%;
+}
+
+
+
+.my-collorembeneathmarkjenkojohandoeimagelikeborder{
+  border-left: 1px solid white;
+  margin-left: -5%;
+
+}
+
+
+
+
+
+
+
+
+
+
+.my-collorembeneathmarkjenkojohandoeimagecomment{
+  color: white;
+  margin-left: -15%;
+}
+
+
+
+
+.lorembeneathmarkjenkojohandoesecimage{
+  max-width: 44%;
+  margin-left: 1%;
+}
+
+
+.lorembeneathmarkjenkojohandoethirdimage{
+  max-width: 44%;
+  margin-left: 5.5%;
+}
+
+
+
+
+
+
+.lorembeneathmarkjenkojohandoeseclastrowimage{
+  max-width: 60%;
+  max-height: 60%;
+  margin-left: -33%;
+  margin-top: 3%;
+}
+
+
+.contrarytopopularbelief{
+  color: white;
+  margin-top: 7.7%;
+  margin-left: 10%;
+}
+
+
+
+
+.my-rowlorembeneathmarkjenkojohandoelasstimagelike{
+margin-top: -5%;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.my-colsimpletransparent{
+  color: white;
+  margin-top: -40%;
+  margin-left: 10%;
+  font-size: 3rem;
+}
+
+.my-colnocontacts{
+  color: white;
+  margin-top: -34%;
+  margin-left: 10%;
+  font-size: 3rem;
+}
+
+
+
+
+.nocontacts{
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.my-colsimpletransparentleftside{
+  margin-left: 10%;
+  margin-top: -28%;
+}
+
+
+
+
+
+
+
+.my-colsimpletransparentleftsidetextone{
+  margin-left: 1%;
+margin-top: 4%;
+  color: white;
+
+}
+
+
+.my-colsimpletransparentleftsidetexttwo{
+
+  margin-left: 1%;
+
+  color: white;
+
+}
+
+.alllimitedlinks{
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+.my-rowsimpletransparentbuttons{
+  margin-left: 20%;
+  margin-top: -20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.my-colborder{
+  border-bottom: 1px solid white;
+  margin-left: 7%;
+  margin-top: 8%;
+}
+
+
+
+
+
+.my-coltoggler{
+margin-left: 2%;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+.my-colacceptyourprizes{
+  color: white;
+  margin-top: 2%;
+}
+
+
+.freedomainregistration{
+  color: red;
+}
+
+
+.my-colfreedomainregistrationbutton{
+margin-left: 5%;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.my-rowsearchbar{
+  margin-top: -40%;
+ 
+}
+
+
+.my-colsearchbar{
+  width: 50rem;
+height: 5%;
+}
+
+#myFilter{
+background-color: rgb(19, 18, 18);
+}
+
+
+
+.my-coldropdown{
+  margin-top: -2.3%;
+}
+
+
+
+
+
+
+
+
+
+.my-usercardsrow{
+margin-top: 5%;
+}
+
+
+
+
+
+.my-usercardscol{
+  border: 1px solid rgb(19, 18, 18);
+  background-color: rgb(19, 18, 18);
+  margin-left: 7.7%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+
+}
+
+.userfirstcard{
+  max-width: 108%;
+  margin-left: -4%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.userfirstcardsecpic{
+  max-width: 30%;
+  border-radius: 100%;
+  margin-top: -15%;
+}
+
+.my-rowuserfirstcardemojies{
+  color: white;
+  margin-left: 1%;
+  margin-top: 10%;
+}
+
+
+.markjecno{
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: clamp(10px, 5vw, 15px);
+}
+
+
+calc(0.1rem + 1vw);
+.manager{
+  color: gray;
+}
+
+
+
+.firstcardlowerbracketsviews{
+  color: white;
+}
+
+
+.my-coluserfirstcardlowerbrackets{
+  border-right: 1px solid white;
+  font-size: clamp(10px, 5vw, 15px);
+
+
+}
+
+
+
+.firstcardlowerbracketsviews{
+  color: gray;
+  text-align: center;
+}
+
+.firstcardlowerbracketsviewsnumb{
+  color: white;
+}
+
+
+.my-coluserfirstcardlowerbracketsviews{
+  font-size: clamp(10px, 5vw, 15px);
+  color: white;
+
 }
